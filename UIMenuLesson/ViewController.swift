@@ -23,7 +23,29 @@ class ViewController: UIViewController {
         }()
         view.addSubview(menuButton)
         
+        menuButton.menu = UIMenu(title:"",children: [
         
+                                    UIMenu(title: "", options: .displayInline, children: [
+                                    
+                                        UIAction(title:"menu01",handler: { _ in
+                                            print("menu01が押されました")
+                                        }),
+                                        UIAction(title:"menu02",handler: { _ in
+                                            print("menu02が押されました")
+                                        }),
+                                        UIAction(title:"menu03",handler: { _ in
+                                            print("menu03が押されました")
+                                        }),
+                                        UIAction(title:"menu04",handler: { _ in
+                                            print("menu04が押されました")
+                                        }),
+                                        UIAction(title:"menu05",handler: { _ in
+                                            print("menu05が押されました")
+                                        })
+                                   ])
+        ])
+        
+        menuButton.showsMenuAsPrimaryAction = true
     }
 
 
